@@ -1,0 +1,26 @@
+// {
+//     "vscode-pets.theme": "none",
+//     "background.fullscreen": {
+
+//         "images": [],
+//         "opacity": 0.1,
+//         "size": "cover",
+//         "position": "center",
+//         "interval": 0,
+//         "random": false
+//     }
+// }
+{
+  "background.fullscreen": {
+    // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
+    "images": ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperflare.com%2Fsearch%3Fwallpaper%3Dclutter&psig=AOvVaw3uijOPzHnq5zSc10_hJtjz&ust=1755048853628000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiEkM-QhI8DFQAAAAAdAAAAABAL", "file:///path/to/local/file"],
+    "opacity": 0.1,
+    "size": "cover",
+    "position": "center",
+    "interval": 0,
+    "random": false
+  },
+  // `sidebar` and `panel` have the same config as `fullscreen`
+  "background.sidebar": {},
+  "background.panel": {}
+}

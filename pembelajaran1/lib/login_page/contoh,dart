@@ -1,0 +1,36 @@
+
+// --------{ ini halaman yang tidak di run/eksekusi, hanya catatan }---------
+// --------{ halaman catatan code/note }--------
+// --------{ 😁🤣👌😅😎🤗🫡😴😣🤤🙃🤑🤯🤬🤢🫢👻 }--------
+
+// SizedBox(
+//     width: double.infinity,
+//     child: ElevatedButton(
+//         onPressed: () {
+//         String username = usernameController.text;
+//         String password = passwordController.text;
+
+//         if (username == "admin" && password == "12345") {
+//             // Pindah ke HomePage
+//             Navigator.pushReplacement(
+//             context,
+//             MaterialPageRoute(builder: (context) => MyWidget()),
+//             );
+//         } else {
+//             ScaffoldMessenger.of(context).showSnackBar(
+//             const SnackBar(
+//                 content: Text("❌ Username atau Password salah"),
+//             ),
+//             );
+//         }
+//         },
+//         style: ElevatedButton.styleFrom(
+//         backgroundColor: Colors.lightBlueAccent,
+//         padding: const EdgeInsets.symmetric(vertical: 15),
+//         ),
+//         child: const Text(
+//         "Login",
+//         style: TextStyle(color: Colors.white),
+//         ),
+//     ),
+// ),
