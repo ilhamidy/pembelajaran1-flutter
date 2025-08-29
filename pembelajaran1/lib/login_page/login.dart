@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pembelajaran1/login_page/home.dart';
 import 'package:pembelajaran1/login_page/homepage.dart';
 import 'package:pembelajaran1/login_page/register.dart';
 
@@ -15,7 +13,6 @@ class _LoginState extends State<Login> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   bool _obsecured = true;
-  bool _isHovering = false;
 
   @override
   Widget build(BuildContext context) {
@@ -67,11 +64,12 @@ class _LoginState extends State<Login> {
                   onPressed: () {
                     String username = usernameController.text;
                     String password = passwordController.text;
-
-                    if (username == "admin" && password == "12345") {
+                    if (username == "Jakarta" && password == "12345") {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => Homepage()),
+                        MaterialPageRoute(
+                          builder: (context) => Homepage(username: username),
+                        ),
                       );
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -98,29 +96,15 @@ class _LoginState extends State<Login> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Belum punya akun? "),
-                  MouseRegion(
-                    onEnter: (_) => setState(() => _isHovering = true),
-                    onExit: (_) => setState(() => _isHovering = false),
-                    cursor: SystemMouseCursors.click,
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Register()),
-                        );
-                      },
-                      child: Text(
-                        "Sign Up",
-                        style: TextStyle(
-                          color: _isHovering ? Colors.blueAccent : Colors.blue,
-                          fontWeight: FontWeight.bold,
-                          decoration: _isHovering
-                              ? TextDecoration.underline
-                              : TextDecoration.none,
-                        ),
-                      ),
-                    ),
+                  Text("Belum punya akun?"),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => Register()),
+                      );
+                    },
+                    child: Text("sign up"),
                   ),
                 ],
               ),

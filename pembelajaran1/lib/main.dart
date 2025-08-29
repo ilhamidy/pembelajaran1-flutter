@@ -1,10 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:pembelajaran1/login_page/login.dart';
-import 'package:pembelajaran1/login_page/register.dart';
-import 'package:pembelajaran1/login_page/splash_screen.dart';
+import 'package:pembelajaran1/login_page/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +31,7 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
-        nextScreen: Login(),
+        nextScreen: Homepage(username: AutofillHints.username),
         splashIconSize: 150,
         backgroundColor: Colors.white,
         duration: 3000,

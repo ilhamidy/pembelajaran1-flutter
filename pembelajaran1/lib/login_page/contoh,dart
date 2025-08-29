@@ -34,3 +34,163 @@
 //         ),
 //     ),
 // ),
+
+// -------{ sign up versi 1 }--------
+
+// Row(
+//   mainAxisAlignment: MainAxisAlignment.center,
+//   children: [
+//     const Text("Belum punya akun? "),
+//     TextButton(
+//       onPressed: () {
+//         Navigator.pushNamed(context, '/register');
+//       },
+//       child: const Text(
+//         "Sign Up",
+//         style: TextStyle(
+//           color: Colors.blue,   // warna biru
+//           fontWeight: FontWeight.bold,
+//         ),
+//       ),
+//     ),
+//   ],
+// ),
+
+// -------{ sign up word versi 2 }-------
+
+// SizedBox(height: 30),
+// Row(
+//   mainAxisAlignment: MainAxisAlignment.center,
+//   children: [
+//     const Text("Belum punya akun? "),
+//     MouseRegion(
+//       onEnter: (_) => setState(() => _isHovering = true),
+//       onExit: (_) => setState(() => _isHovering = false),
+//       cursor: SystemMouseCursors.click,
+//       child: GestureDetector(
+//         onTap: () {
+//           Navigator.push(
+//             context,
+//             MaterialPageRoute(builder: (context) => Register()),
+//           );
+//         },
+//         child: Text(
+//           "Sign Up",
+//           style: TextStyle(
+//             color: _isHovering ? Colors.blueAccent : Colors.blue,
+//             fontWeight: FontWeight.bold,
+//             decoration: _isHovering
+//                 ? TextDecoration.underline
+//                 : TextDecoration.none,
+//           ),
+//         ),
+//       ),
+//     ),
+//   ],
+// ),
+
+// ------{ source code homepage }-------
+
+// import 'package:flutter/material.dart';
+
+// MyHomepage sekarang menerima satu argumen: username
+// class Homepage extends StatefulWidget {
+//   final String username;
+//   final String sekolah;
+
+//   const Homepage({super.key, required this.username, required this.sekolah});
+
+//   @override
+//   State<Homepage> createState() => _HomepageState();
+// }
+
+// class _HomepageState extends State<Homepage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         backgroundColor: Colors.lightBlueAccent,
+//         elevation: 0,
+//         title: Padding(
+//           padding: EdgeInsets.symmetric(horizontal: 15),
+//           child: Column(
+//             crossAxisAlignment: CrossAxisAlignment.start,
+//             children: [
+//               Text(
+//                 'mySiswa',
+//                 style: TextStyle(
+//                   color: Colors.black,
+//                   fontWeight: FontWeight.bold,
+//                   fontSize: 24,
+//                 ),
+//               ),
+//               Text(
+//                 widget.sekolah,
+//                 style: TextStyle(color: Colors.white, fontSize: 16),
+//               ),
+//             ],
+//           ),
+//         ),
+//         actions: [
+//           Padding(
+//             padding: const EdgeInsets.only(right: 15),
+//             child: IconButton(
+//               icon: Icon(Icons.notifications, color: Colors.black),
+//               onPressed: () {},
+//             ),
+//           ),
+//         ],
+//       ),
+//       body: Center(
+//         child: Padding(
+//           padding: const EdgeInsets.all(25.0),
+//           child: Column(
+//             crossAxisAlignment: CrossAxisAlignment.center,
+//             children: [
+//               Gunakan variabel username yang diterima dari halaman login
+//               Text(
+//                 'Assalamualaikum, ${widget.username}',
+//                 style: const TextStyle(fontSize: 18),
+//               ),
+//               const Text(
+//                 'Semoga hari mu menyenangkan',
+//                 style: TextStyle(fontSize: 18),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {},
+//         backgroundColor: Colors.deepPurple,
+//         child: const Icon(Icons.camera_alt),
+//       ),
+//       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+//       bottomNavigationBar: BottomAppBar(
+//         shape: const CircularNotchedRectangle(),
+//         child: Row(
+//           mainAxisAlignment: MainAxisAlignment.spaceAround,
+//           children: [
+//             IconButton(
+//               icon: const Icon(Icons.home, color: Colors.deepPurple),
+//               onPressed: () {},
+//             ),
+//             IconButton(icon: const Icon(Icons.school), onPressed: () {}),
+//             const SizedBox(width: 48),
+//             IconButton(
+//               icon: const Icon(Icons.calendar_today),
+//               onPressed: () {},
+//             ),
+//             IconButton(icon: const Icon(Icons.person), onPressed: () {}),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+Navigator.pushNamed
+Navigator.pushReplacementNamed
+
+Navigator.push
+Navigator.pushReplacement
